@@ -1,6 +1,8 @@
 defmodule BetonWeb.Endpoint do
   use Phoenix.Endpoint, otp_app: :beton
 
+  socket "/live", Phoenix.LiveView.Socket
+
   socket "/socket", BetonWeb.UserSocket,
     websocket: true,
     longpoll: false
