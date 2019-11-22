@@ -15,6 +15,7 @@
   * Start Phoenix endpoint with `mix phx.server`
 
 **Or**, with to deploy with docker:
+  * Create a `.env` file per the `.env.template`
   * Build and start with `docker-compose up`
   * Re-build with `docker-compose build`
   * Stop with `docker-compose down`
@@ -25,3 +26,5 @@ Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
   1. https://hexdocs.pm/phoenix
   2. https://dev.to/ilsanto/deploy-a-phoenix-app-with-docker-stack-1j9c
+  3. https://phxroad.com/guides/add-authentication-to-phoenix-with-pow
+  4. https://hexdocs.pm/pow/README.html

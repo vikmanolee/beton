@@ -18,12 +18,16 @@ config :beton, BetonWeb.Endpoint,
   render_errors: [view: BetonWeb.ErrorView, accepts: ~w(html json)],
   pubsub: [name: Beton.PubSub, adapter: Phoenix.PubSub.PG2]
 
+# User authentication with Pow
+config :beton, :pow,
+  user: Beton.Users.User,
+  repo: Beton.Repo
+
 # Configures Elixir's Logger
 config :logger, :console,
   format: "$time $metadata[$level] $message\n",
   metadata: [:request_id]
 
-# Use Jason for JSON parsing in Phoenix
 config :phoenix, :json_library, Jason
 
 # Import environment specific config. This must remain at the bottom

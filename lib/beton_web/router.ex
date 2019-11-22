@@ -1,5 +1,6 @@
 defmodule BetonWeb.Router do
   use BetonWeb, :router
+  use Pow.Phoenix.Router
 
   pipeline :browser do
     plug :accepts, ["html"]
@@ -12,6 +13,13 @@ defmodule BetonWeb.Router do
   pipeline :api do
     plug :accepts, ["json"]
   end
+
+  scope "/" do
+    pipe_through :browser
+
+    pow_routes()
+  end
+
 
   scope "/", BetonWeb do
     pipe_through :browser

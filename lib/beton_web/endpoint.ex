@@ -42,6 +42,8 @@ defmodule BetonWeb.Endpoint do
     key: "_beton_key",
     signing_salt: "n5Pl82dn"
 
+  plug Pow.Plug.Session, otp_app: :beton
+
   plug BetonWeb.Router
 
   @doc """
